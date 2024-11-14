@@ -191,8 +191,8 @@ export const confirm = (opts: ConfirmOptions) => {
 					)}\n${color.gray(S_BAR)}`;
 				default: {
 					return `${title}${color.cyan(S_BAR)}  ${this.value
-							? `${color.green(S_RADIO_ACTIVE)} ${active}`
-							: `${color.dim(S_RADIO_INACTIVE)} ${color.dim(active)}`
+						? `${color.green(S_RADIO_ACTIVE)} ${active}`
+						: `${color.dim(S_RADIO_INACTIVE)} ${color.dim(active)}`
 						} ${color.dim('/')} ${!this.value
 							? `${color.green(S_RADIO_ACTIVE)} ${inactive}`
 							: `${color.dim(S_RADIO_INACTIVE)} ${color.dim(inactive)}`
@@ -483,9 +483,9 @@ export const multiselect = <Value>(opts: MultiSelectOptions<Value>) => {
 			switch (this.state) {
 				case 'submit': {
 					return `${title}${color.gray(S_BAR)}  ${this.options
-							.filter(({ value }) => this.value.includes(value))
-							.map((option) => opt(option, 'submitted'))
-							.join(color.dim(', ')) || color.dim('none')
+						.filter(({ value }) => this.value.includes(value))
+						.map((option) => opt(option, 'submitted'))
+						.join(color.dim(', ')) || color.dim('none')
 						}`;
 				}
 				case 'cancel': {
