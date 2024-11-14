@@ -17,6 +17,7 @@ export default class SearchPrompt<
 	inputCursor = 0;
 	maxItems: MaxItems;
 	selected: T[] = [];
+	_track = true;
 
 	value: T['value'] | T['value'][] = '';
 	private get _value() {
@@ -32,6 +33,7 @@ export default class SearchPrompt<
 		this.options = opts.options;
 		this.maxItems = opts.maxItems || 1;
 		this.valueWithCursor = opts.initialValue || '';
+
 		if (this.valueWithCursor) {
 			this.inputCursor = this.valueWithCursor.length;
 			this.fuzzyFilter(opts);
