@@ -53,6 +53,8 @@ export default class SearchPrompt<T extends { value: any; label?: string }> exte
 				const value = this.options[this.selectCursor];
 				if (this.selected.includes(value)) {
 					this.selected = this.selected.filter((v) => v !== value);
+				} else if (this.selected.length >= this.maxItems) {
+					return;
 				} else {
 					this.selected.push(value);
 				}
@@ -71,8 +73,8 @@ export default class SearchPrompt<T extends { value: any; label?: string }> exte
 			this.value = this.selected.length
 				? this.selected.map((item) => item.value)
 				: this.maxItems > 1
-					? [this.options[this.selectCursor].value]
-					: this.options[this.selectCursor].value;
+					? [this.options[this.selectCursor]?.value]
+					: this.options[this.selectCursor]?.value;
 		});
 
 		this.on('cursor', (key) => {

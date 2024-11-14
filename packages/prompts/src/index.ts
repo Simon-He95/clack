@@ -389,7 +389,7 @@ export const search = <Value, MaxItems extends number>(opts: SearchOptions<Value
 						'selected'
 					)}`;
 				case 'cancel':
-					return `${title}${color.gray(S_BAR)}  ${opt(this.options[0], 'cancelled')}\n${color.gray(
+					return `${title}${color.gray(S_BAR)}  ${opt(this.options[0] || { value: 'cancelled' }, 'cancelled')}\n${color.gray(
 						S_BAR
 					)}`;
 				default: {
