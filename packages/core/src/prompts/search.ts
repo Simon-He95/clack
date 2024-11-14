@@ -7,7 +7,7 @@ interface SearchOptions<T extends { value: any; label?: string }, MaxItems exten
 	maxItems?: MaxItems;
 }
 export default class SearchPrompt<
-	T extends { value: any; label?: string; isSelected?: boolean },
+	T extends { value: any; label?: string; },
 	MaxItems extends number,
 > extends Prompt {
 	options: T[];
@@ -17,7 +17,6 @@ export default class SearchPrompt<
 	inputCursor = 0;
 	maxItems: MaxItems;
 	selected: T[] = [];
-	_track = true;
 
 	value: T['value'] | T['value'][] = '';
 	private get _value() {
@@ -29,7 +28,7 @@ export default class SearchPrompt<
 	}
 
 	constructor(opts: SearchOptions<T, any>) {
-		super(opts, false);
+		super(opts, true);
 		this.options = opts.options;
 		this.maxItems = opts.maxItems || 1;
 		this.valueWithCursor = opts.initialValue || '';
