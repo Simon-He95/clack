@@ -219,7 +219,7 @@ export interface SelectOptions<Value> {
 	maxItems?: number;
 }
 
-export interface SearchOptions<Value, MaxItems> {
+export interface SearchOptions<Value, MaxItems extends number> {
 	message?: string;
 	options: Option<Value>[];
 	initialValue?: Value;
@@ -425,7 +425,7 @@ export const search = <Value, MaxItems extends number>(opts: SearchOptions<Value
 				}
 			}
 		},
-	}).prompt() as Promise<Value | symbol>;
+	}).prompt() as Promise<MaxItems extends 1 ? Value | symbol : (Value | symbol)[]>;
 };
 
 export interface MultiSelectOptions<Value> {
