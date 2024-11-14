@@ -224,7 +224,7 @@ export interface SearchOptions<Value, MaxItems extends number> {
 	options: Option<Value>[];
 	initialValue?: Value;
 	placeholder?: string;
-	value?: MaxItems extends 1 ? string : string[];
+	value?: MaxItems extends 1 ? Option<Value>['value'] : Option<Value>['value'][];
 	maxItems?: MaxItems;
 }
 
@@ -318,7 +318,9 @@ export const selectKey = <Value extends string>(opts: SelectOptions<Value>) => {
 	}).prompt() as Promise<Value | symbol>;
 };
 
-export const search = <Value, MaxItems extends number>(opts: SearchOptions<Value, MaxItems>) => {
+export const search = <Value, MaxItems extends number = 1>(
+	opts: SearchOptions<Value, MaxItems>
+) => {
 	const opt = (
 		option: Option<Value>,
 		state:
@@ -394,7 +396,7 @@ export const search = <Value, MaxItems extends number>(opts: SearchOptions<Value
 					)}`;
 				default: {
 					let getStatus = (option: Option<Value>, i: number) => {
-						if (this.maxItems > 1) {
+						if ((opts.maxItems ?? 1) > 1) {
 							if (i === this.selectCursor) {
 								return this.selected.some((item) => item.value === option.value)
 									? 'active-selected'
@@ -425,7 +427,7 @@ export const search = <Value, MaxItems extends number>(opts: SearchOptions<Value
 				}
 			}
 		},
-	}).prompt() as Promise<MaxItems extends 1 ? Value | symbol : (Value | symbol)[]>;
+	}).prompt() as Promise<MaxItems extends 1 ? Value : Value[]>;
 };
 
 export interface MultiSelectOptions<Value> {
