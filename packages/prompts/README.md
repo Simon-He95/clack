@@ -1,4 +1,4 @@
-# `@clack/prompts`
+# `@simon_he/clack-prompts`
 
 Effortlessly build beautiful command-line apps 🪄 [Try the demo](https://stackblitz.com/edit/clack-prompts?file=index.js)
 
@@ -6,7 +6,7 @@ Effortlessly build beautiful command-line apps 🪄 [Try the demo](https://stack
 
 ---
 
-`@clack/prompts` is an opinionated, pre-styled wrapper around [`@clack/core`](https://www.npmjs.com/package/@clack/core).
+`@simon_he/clack-prompts` is an opinionated, pre-styled wrapper around [`@simon_he/clack-core`](https://www.npmjs.com/package/@simon_he/clack-core).
 
 - 🤏 80% smaller than other options
 - 💎 Beautiful, minimal UI
@@ -20,7 +20,7 @@ Effortlessly build beautiful command-line apps 🪄 [Try the demo](https://stack
 The `intro` and `outro` functions will print a message to begin or end a prompt session, respectively.
 
 ```js
-import { intro, outro } from '@clack/prompts';
+import { intro, outro } from '@simon_he/clack-prompts';
 
 intro(`create-my-app`);
 // Do stuff
@@ -32,7 +32,7 @@ outro(`You're all set!`);
 The `isCancel` function is a guard that detects when a user cancels a question with `CTRL + C`. You should handle this situation for each prompt, optionally providing a nice cancellation message with the `cancel` utility.
 
 ```js
-import { isCancel, cancel, text } from '@clack/prompts';
+import { isCancel, cancel, text } from '@simon_he/clack-prompts';
 
 const value = await text(/* TODO */);
 
@@ -49,7 +49,7 @@ if (isCancel(value)) {
 The text component accepts a single line of text.
 
 ```js
-import { text } from '@clack/prompts';
+import { text } from '@simon_he/clack-prompts';
 
 const meaning = await text({
   message: 'What is the meaning of life?',
@@ -66,7 +66,7 @@ const meaning = await text({
 The confirm component accepts a yes or no answer. The result is a boolean value of `true` or `false`.
 
 ```js
-import { confirm } from '@clack/prompts';
+import { confirm } from '@simon_he/clack-prompts';
 
 const shouldContinue = await confirm({
   message: 'Do you want to continue?',
@@ -78,7 +78,7 @@ const shouldContinue = await confirm({
 The select component allows a user to choose one value from a list of options. The result is the `value` prop of a given option.
 
 ```js
-import { select } from '@clack/prompts';
+import { select } from '@simon_he/clack-prompts';
 
 const projectType = await select({
   message: 'Pick a project type.',
@@ -95,7 +95,7 @@ const projectType = await select({
 The `multiselect` component allows a user to choose many values from a list of options. The result is an array with all selected `value` props.
 
 ```js
-import { multiselect } from '@clack/prompts';
+import { multiselect } from '@simon_he/clack-prompts';
 
 const additionalTools = await multiselect({
   message: 'Select additional tools.',
@@ -113,7 +113,7 @@ const additionalTools = await multiselect({
 The spinner component surfaces a pending action, such as a long-running download or dependency installation.
 
 ```js
-import { spinner } from '@clack/prompts';
+import { spinner } from '@simon_he/clack-prompts';
 
 const s = spinner();
 s.start('Installing via npm');
@@ -128,7 +128,7 @@ s.stop('Installed via npm');
 Grouping prompts together is a great way to keep your code organized. This accepts a JSON object with a name that can be used to reference the group later. The second argument is an optional but has a `onCancel` callback that will be called if the user cancels one of the prompts in the group.
 
 ```js
-import * as p from '@clack/prompts';
+import * as p from '@simon_he/clack-prompts';
 
 const group = await p.group(
   {

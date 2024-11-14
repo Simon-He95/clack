@@ -1,11 +1,11 @@
-# @clack/core
+# @simon_he/clack-core
 
 ## 0.3.4
 
 ### Patch Changes
 
-- a04e418: fix(@clack/core): keyboard input not working after await in spinner
-- 4f6fcf5: feat(@clack/core): allow tab completion for placeholders
+- a04e418: fix(@simon_he/clack-core): keyboard input not working after await in spinner
+- 4f6fcf5: feat(@simon_he/clack-core): allow tab completion for placeholders
 
 ## 0.3.3
 
@@ -53,7 +53,7 @@
 ### Patch Changes
 
 - 1251132: Multiselect: return `Value[]` instead of `Option[]`.
-- 8994382: Add a password prompt to `@clack/prompts`
+- 8994382: Add a password prompt to `@simon_he/clack-prompts`
 
 ## 0.1.8
 

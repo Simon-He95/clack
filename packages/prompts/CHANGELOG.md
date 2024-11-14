@@ -1,4 +1,10 @@
-# @clack/prompts
+# @simon_he/clack-prompts
+
+## 0.8.1
+
+### Patch Changes
+
+- 360afeb: feat: adaptative max items
 
 ## 0.8.0
 
@@ -12,7 +18,7 @@
 - 50ed94a: fix: clear `spinner` hooks on `spinner.stop`
 - Updated dependencies [a04e418]
 - Updated dependencies [4f6fcf5]
-  - @clack/core@0.3.4
+  - @simon_he/clack-core@0.3.4
 
 ## 0.7.0
 
@@ -26,7 +32,7 @@
 - 52183c4: Fix `spinner` conflict with terminal on error between `spinner.start()` and `spinner.stop()`
 - ab51d29: Fixes cases where the note title length was miscalculated due to ansi characters
 - Updated dependencies [cd79076]
-  - @clack/core@0.3.3
+  - @simon_he/clack-core@0.3.3
 
 ## 0.6.3
 
@@ -34,7 +40,7 @@
 
 - c96eda5: Enable hard line-wrapping behavior for long words without spaces
 - Updated dependencies [c96eda5]
-  - @clack/core@0.3.2
+  - @simon_he/clack-core@0.3.2
 
 ## 0.6.2
 
@@ -42,7 +48,7 @@
 
 - 58a1df1: Fix line duplication bug by automatically wrapping prompts to `process.stdout.columns`
 - Updated dependencies [58a1df1]
-  - @clack/core@0.3.1
+  - @simon_he/clack-core@0.3.1
 
 ## 0.6.1
 
@@ -61,7 +67,7 @@
 
 - Updated dependencies [8a4a12f]
 - Updated dependencies [8a4a12f]
-  - @clack/core@0.3.0
+  - @simon_he/clack-core@0.3.0
 
 ## 0.5.1
 
@@ -69,7 +75,7 @@
 
 - cc11917: Update default `password` mask
 - Updated dependencies [ec812b6]
-  - @clack/core@0.2.1
+  - @simon_he/clack-core@0.2.1
 
 ## 0.5.0
 
@@ -82,17 +88,17 @@
 
 - Updated dependencies [d74dd05]
 - Updated dependencies [54c1bc3]
-  - @clack/core@0.2.0
+  - @simon_he/clack-core@0.2.0
 
 ## 0.4.5
 
 ### Patch Changes
 
 - 1251132: Multiselect: return `Value[]` instead of `Option[]`.
-- 8994382: Add a password prompt to `@clack/prompts`
+- 8994382: Add a password prompt to `@simon_he/clack-prompts`
 - Updated dependencies [1251132]
 - Updated dependencies [8994382]
-  - @clack/core@0.1.9
+  - @simon_he/clack-core@0.1.9
 
 ## 0.4.4
 
@@ -103,7 +109,7 @@
   Credits to @banjo for the bug report and initial PR!
 
 - Updated dependencies [d96071c]
-  - @clack/core@0.1.8
+  - @simon_he/clack-core@0.1.8
 
 ## 0.4.3
 
@@ -123,7 +129,7 @@
 
 - 7fb5375: Adds a new `defaultValue` option to the text prompt, removes automatic usage of the placeholder value.
 - Updated dependencies [7fb5375]
-  - @clack/core@0.1.6
+  - @simon_he/clack-core@0.1.6
 
 ## 0.4.0
 
@@ -135,7 +141,7 @@
 
 - de1314e: Support `required` option for multi-select
 - Updated dependencies [de1314e]
-  - @clack/core@0.1.5
+  - @simon_he/clack-core@0.1.5
 
 ## 0.3.0
 
@@ -149,7 +155,7 @@
 - ca77da1: Fix multiselect initial value logic
 - Updated dependencies [ca77da1]
 - Updated dependencies [8aed606]
-  - @clack/core@0.1.4
+  - @simon_he/clack-core@0.1.4
 
 ## 0.2.2
 
@@ -163,7 +169,7 @@
 
 - a99c458: Support `initialValue` option for text prompt
 - Updated dependencies [a99c458]
-  - @clack/core@0.1.3
+  - @simon_he/clack-core@0.1.3
 
 ## 0.2.0
 
@@ -177,7 +183,7 @@
 - Updated dependencies [7dcad8f]
 - Updated dependencies [2242f13]
 - Updated dependencies [b1341d6]
-  - @clack/core@0.1.2
+  - @simon_he/clack-core@0.1.2
 
 ## 0.1.1
 
@@ -186,7 +192,7 @@
 - fa09bf5: Use circle for radio, square for checkbox
 - Updated dependencies [4be7dbf]
 - Updated dependencies [b480679]
-  - @clack/core@0.1.1
+  - @simon_he/clack-core@0.1.1
 
 ## 0.1.0
 
@@ -197,7 +203,7 @@
 ### Patch Changes
 
 - Updated dependencies [7015ec9]
-  - @clack/core@0.1.0
+  - @simon_he/clack-core@0.1.0
 
 ## 0.0.10
 
@@ -216,7 +222,7 @@
 ### Patch Changes
 
 - Updated dependencies [9d371c3]
-  - @clack/core@0.0.12
+  - @simon_he/clack-core@0.0.12
 
 ## 0.0.7
 
@@ -232,7 +238,7 @@
 - Updated dependencies [441d5b7]
 - Updated dependencies [d20ef2a]
 - Updated dependencies [fe13c2f]
-  - @clack/core@0.0.11
+  - @simon_he/clack-core@0.0.11
 
 ## 0.0.5
 
@@ -252,14 +258,14 @@
 
 - a0cb382: Add `main` entrypoint
 - Updated dependencies [a0cb382]
-  - @clack/core@0.0.10
+  - @simon_he/clack-core@0.0.10
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies
-  - @clack/core@0.0.9
+  - @simon_he/clack-core@0.0.9
 
 ## 0.0.1
 
@@ -267,4 +273,4 @@
 
 - a4b5e13: Initial release
 - Updated dependencies [a4b5e13]
-  - @clack/core@0.0.8
+  - @simon_he/clack-core@0.0.8

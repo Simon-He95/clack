@@ -1,4 +1,4 @@
-import * as p from '@clack/prompts';
+import * as p from '@simon_he/clack-prompts';
 import { setTimeout } from 'node:timers/promises';
 import color from 'picocolors';
 

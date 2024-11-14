@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "paths": {
-      "@clack/core": ["./packages/core/src"]
+      "@simon_he/clack-core": ["./packages/core/src"]
     }
   },
   "include": ["packages"]

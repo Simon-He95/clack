@@ -1,4 +1,4 @@
-import * as p from '@clack/prompts';
+import * as p from '@simon_he/clack-prompts';
 import { setTimeout } from 'node:timers/promises';
 import color from 'picocolors';
 
@@ -11,6 +11,12 @@ async function main() {
 
 	const project = await p.group(
 		{
+			search: () =>
+				p.search({
+					message: 'What is your gender?',
+					placeholder: 'input your gender',
+					options: [{ value: 'male' }, { value: 'female' }],
+				}),
 			path: () =>
 				p.text({
 					message: 'Where should we create your project?',

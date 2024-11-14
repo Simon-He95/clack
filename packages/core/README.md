@@ -1,4 +1,4 @@
-# `@clack/core`
+# `@simon_he/clack-core`
 
 Clack contains low-level primitives for implementing your own command-line applications.
 
@@ -7,7 +7,7 @@ Currently, `TextPrompt`, `SelectPrompt`, and `ConfirmPrompt` are exposed as well
 Each `Prompt` accepts a `render` function.
 
 ```js
-import { TextPrompt, isCancel } from '@clack/core';
+import { TextPrompt, isCancel } from '@simon_he/clack-core';
 
 const p = new TextPrompt({
   render() {

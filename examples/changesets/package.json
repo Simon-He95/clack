@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@clack/core": "workspace:*",
-    "@clack/prompts": "workspace:*",
+    "@simon_he/clack-core": "workspace:*",
+    "@simon_he/clack-prompts": "workspace:*",
     "picocolors": "^1.0.0"
   },
   "scripts": {
