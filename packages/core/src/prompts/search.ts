@@ -36,13 +36,13 @@ export default class SearchPrompt<T extends { value: any; label?: string }> exte
 		}
 
 		this.on('key', (v) => {
-			if (v.charCodeAt(0) === 127) {
+			if (v.charCodeAt(0) === 127 || v.charCodeAt(0) === 8) {
 				this.valueWithCursor =
 					this.valueWithCursor.slice(0, this.inputCursor - 1) +
 					this.valueWithCursor.slice(this.inputCursor);
 				this.inputCursor = this.inputCursor === 0 ? 0 : this.inputCursor - 1;
 				this.selectCursor = 0;
-			} else if (v.charCodeAt(0) === 8) {
+			} else if (v.charCodeAt(0) === 27) {
 				this.valueWithCursor =
 					this.valueWithCursor.slice(0, this.inputCursor) +
 					this.valueWithCursor.slice(this.inputCursor + 1);

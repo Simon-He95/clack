@@ -174,6 +174,8 @@ export default class Prompt {
 		}
 		if (char) {
 			this.emit('key', char.toLowerCase());
+		} else if (key?.name === 'delete' && key.sequence) {
+			this.emit('key', key.sequence.toLowerCase());
 		}
 
 		if (key?.name === 'return') {
