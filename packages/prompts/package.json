@@ -1,6 +1,6 @@
 {
   "name": "@simon_he/clack-prompts",
-  "version": "0.8.10",
+  "version": "0.8.11",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -53,7 +53,7 @@
     "prepack": "pnpm build"
   },
   "dependencies": {
-    "@simon_he/clack-core": "^0.3.7",
+    "@simon_he/clack-core": "^0.3.9",
     "picocolors": "^1.0.0",
     "sisteransi": "^1.0.5"
   },
